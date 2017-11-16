@@ -1,0 +1,27 @@
+<resources>
+    <!--Manifest-->
+    <string name="app_name">Easy To Do List</string>
+
+    <!--MainActivity-->
+    <string name="sample_task_created_toast">Auto Created 1 Sample Task</string>
+    <string name="sample_task_title">Sample Task (Auto created)</string>
+    <string name="sample_task_desc">FAQs:\n > Create New:  Tap \'+\' icon.\n > Mark Complete:  Tap Checkbox.\n > Edit:  Tap on Task.\n > Delete:  Tap and Hold on Task.</string>
+    <string name="sample_task_date">31/01/2001</string>
+    <string name="task_created_toast">Created 1 Task</string>
+    <string name="delete_toast">Deleted 1 Task</string>
+
+    <!--OptionsMenu-->
+    <string name="add_task">Add Task</string>
+    <string name="show_incomplete">Show Incomplete Tasks</string>
+    <string name="show_completed">Show Completed Tasks</string>
+    <string name="show_all">Show All Tasks</string>
+
+    <!--PopupMenu-->
+    <string name="delete">Delete</string>
+
+    <!--Dialog-->
+    <string name="edt_title">Title (Max: 30 char)</string>
+    <string name="edt_description">Description (Max: 150 char)</string>
+    <string name="no_changes">No Data Found.\nChanges discarded.</string>
+
+</resources>

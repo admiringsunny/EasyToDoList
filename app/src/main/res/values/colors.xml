@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorBkg">#fcea92</color>
+    <color name="colorIncompleteTaskBkg">#FFD500</color>
+    <color name="colorCompletedTaskBkg">#00A715</color>
+    <color name="colorDateBkg">#000000</color>
+    <color name="colorText">#000000</color>
+    <color name="colorDateText">#FFFFFF</color>
+
+</resources>

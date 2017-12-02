@@ -17,8 +17,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Comparator;
 
 public class MainActivity
         extends AppCompatActivity
@@ -94,6 +93,7 @@ public class MainActivity
             tasks = db.getAllTasks();
         }
 
+        Collections.sort(tasks, new DateSorter());
         customTasksAdapter = new TasksCustomAdapter(getApplicationContext(), tasks);
         list_all_tasks.setAdapter(customTasksAdapter);
         list_all_tasks.setOnItemClickListener(this);
@@ -222,5 +222,19 @@ public class MainActivity
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private static class DateSorter implements Comparator {
+        @Override
+        public int compare(Object o1, Object o2) {
+
+            String date1 = dateToNumber(((Task) o1).getDueDate());
+            String date2 = dateToNumber(((Task) o2).getDueDate());
+            return date1.compareTo(date2);
+        }
+    }
+
+    private static String dateToNumber(String date) {
+        return date.split("/")[2] + date.split("/")[1] + date.split("/")[0];
     }
 }

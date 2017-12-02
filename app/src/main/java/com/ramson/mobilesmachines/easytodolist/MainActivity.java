@@ -228,13 +228,20 @@ public class MainActivity
         @Override
         public int compare(Object o1, Object o2) {
 
-            String date1 = dateToNumber(((Task) o1).getDueDate());
-            String date2 = dateToNumber(((Task) o2).getDueDate());
-            return date1.compareTo(date2);
+            String date1 = ((Task) o1).getDueDate();
+            String sortableDate1 = 
+                    date1.split("/")[2] 
+                            + (date1.split("/")[1].length() < 2 ? "0" + date1.split("/")[1]  : date1.split("/")[1] )
+                            + (date1.split("/")[0].length() < 2 ? "0" + date1.split("/")[0]  : date1.split("/")[0] );
+
+            String date2 = ((Task) o2).getDueDate();
+            String sortableDate2 =
+                    date2.split("/")[2]
+                            + (date2.split("/")[1].length() < 2 ? "0" + date2.split("/")[1]  : date2.split("/")[1] )
+                            + (date2.split("/")[0].length() < 2 ? "0" + date2.split("/")[0]  : date2.split("/")[0] );
+
+            return sortableDate1.compareTo(sortableDate2);
         }
     }
 
-    private static String dateToNumber(String date) {
-        return date.split("/")[2] + date.split("/")[1] + date.split("/")[0];
-    }
 }
